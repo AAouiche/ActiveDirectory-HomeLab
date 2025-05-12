@@ -7,6 +7,8 @@
 - Oracle VirtualBox  
 - Active Directory Domain Services  
 - PowerShell  
+- Windows Server 2019  
+- Windows 10  
 
 ---
 
@@ -73,8 +75,51 @@ Download and install:
 
 3. Configure:  
    - Add a new forest  
-   - Enter your domain name (e.g., homelab.local)  
+   - Enter your domain name  
    - Complete remaining settings and install  
-   ![New forest configuration](https://github.com/user-attachments/assets/301cf2b7-6e93-44b7-a8e7-32f33f614be6) 
+   ![New forest configuration](https://github.com/user-attachments/assets/301cf2b7-6e93-44b7-a8e7-32f33f614be6)  
+
+---
+
+### 5. Configure Routing and Remote Access  
+
+#### Install Remote Access Role  
+1. Add roles and features  
+2. Select "Remote Access"  
+   ![Remote Access selection](https://github.com/user-attachments/assets/d0746525-96a2-43c9-a69e-df56dd1b262b)  
+
+3. Select "Routing"  
+   ![Routing selection](https://github.com/user-attachments/assets/ea8856f0-b24a-4672-87f9-46a064c9970e)  
+4. Complete installation  
+
+#### Configure NAT  
+1. Open "Routing and Remote Access" from Tools menu  
+   ![RRAS tool](https://github.com/user-attachments/assets/98802fbe-dbeb-48ec-bc07-a952d1c8ff68)  
+
+2. Select "Configure and Enable Routing and Remote Access"  
+   ![Configuration wizard](https://github.com/user-attachments/assets/0c4f728b-cbcb-4d03-a7f1-d830bc235db0)  
+
+3. Choose "NAT" configuration  
+   ![NAT selection](https://github.com/user-attachments/assets/d82c2c90-115c-4131-abc0-6060ba7ef6c4)  
+
+---
+
+### 6. Configure DHCP Server  
+
+#### Install DHCP Role  
+1. Add roles and features  
+2. Select "DHCP Server"  
+   ![DHCP selection](https://github.com/user-attachments/assets/9a153f23-67b9-4b02-8b18-1174b0d44caa)  
+
+#### Configure DHCP Scope  
+1. Open DHCP Manager from Tools menu  
+   ![DHCP Manager](https://github.com/user-attachments/assets/ae2e0987-ffda-4248-ae64-c8d152c98cd0)  
+
+2. Set your IP address ranges  
+   ![IP range configuration](https://github.com/user-attachments/assets/e0e29555-069f-4132-a083-4f5b2f7d0b7d)  
+
+3. Add IP addresses to be used by clients  
+   ![Client IP configuration](https://github.com/user-attachments/assets/730f95c1-9d17-4f30-bf17-a765a0cd6dd9)  
+
 
 
