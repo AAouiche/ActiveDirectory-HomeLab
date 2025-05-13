@@ -121,5 +121,52 @@ Download and install:
 3. Add IP addresses to be used by clients  
    ![Client IP configuration](https://github.com/user-attachments/assets/730f95c1-9d17-4f30-bf17-a765a0cd6dd9)  
 
+---
+
+### 7. Add Users Using PowerShell  
+
+#### Download and Run User Creation Script  
+1. Download the PowerShell script folder from repository:  
+   [ActiveDirectory-HomeLab/Scripts](https://github.com/AAouiche/ActiveDirectory-HomeLab/tree/main/Scripts)  
+2. Run PowerShell ISE as administrator and open `1_CREATE_USERS.ps1`  
+   ![PowerShell ISE](https://github.com/user-attachments/assets/66d5bd57-fbe0-4127-a464-27ee49f4725d)  
+   ![Script open](https://github.com/user-attachments/assets/2967a475-ffbb-4b1a-bb1e-96416b7e5a2b)  
+
+3. Change execution policy to unrestricted:  
+   ![Execution policy](https://github.com/user-attachments/assets/84040f73-95d4-4eef-91ee-241223f35e6a)  
+
+4. Change directory to where the scripts folder is and run:  
+   ![Script execution](https://github.com/user-attachments/assets/4a29ae82-7191-4105-92b5-68efb358d899)  
+
+---
+
+### 8. Configure Windows Client VM  
+
+#### Create Client VM  
+1. Create a new VM using the installed Windows ISO  
+   ![New client VM](https://github.com/user-attachments/assets/0e948bc9-e6ee-4f4d-a3e2-5039944c7a1e)  
+
+#### Network Configuration  
+1. Open Settings > Network Connections  
+2. Identify the adapter with IP 172.16.0.1  
+   ![Network adapter](https://github.com/user-attachments/assets/161e369d-6987-4177-85fb-bf534017080f)  
+3. Click Properties > IPv4 and configure:  
+   ![IPv4 configuration](https://github.com/user-attachments/assets/38692f25-a4da-43f8-b5a5-745e257f73f9)  
+
+#### Join Domain  
+1. Go to Settings > About > Rename this PC  
+   ![Rename PC](https://github.com/user-attachments/assets/8d5856d1-ed76-4d68-b900-7a5d5e37bc0d)  
+2. Join domain using domain admin credentials when prompted  
+   ![Domain join](https://github.com/user-attachments/assets/308c1da7-c8c0-4521-a149-7f1ccb3fc548)  
+3. Verify connection with `ipconfig` - should show domain-issued IP and gateway  
+
+---
+
+## Completion  
+Your Active Directory lab environment is now fully configured with:  
+- Domain controller  
+- DHCP services  
+- User accounts  
+- Client machine joined to domain  
 
 
